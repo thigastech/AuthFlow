@@ -1,0 +1,196 @@
+
+:root {
+    /* Cores Principais */
+    --color-bg-main: #f4f6f9;
+    --color-surface: #ffffff;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-light: #eff6ff;
+
+    /* Cores de Texto */
+    --color-text-title: #0f172a;
+    --color-text-main: #334155;
+    --color-text-muted: #64748b;
+    --color-text-subtle: #94a3b8;
+
+    /* Bordas & Sombras */
+    --border-color: #e2e8f0;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+
+    /* Tipografia */
+    --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   2. ESTRUTURA GLOBAL (BODY)
+   -------------------------------------------------------------------------- */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   3. CABEÇALHO (HEADER)
+   -------------------------------------------------------------------------- */
+header {
+    width: 100%;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-text-title);
+    letter-spacing: -0.025em;
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    font-size: 0.925rem;
+    color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   4. CONTEÚDO PRINCIPAL (MAIN & CARD)
+   -------------------------------------------------------------------------- */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 1.25rem;
+}
+
+section {
+    background-color: var(--color-surface);
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-title);
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    font-size: 0.975rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. NAVEGAÇÃO E BOTÕES (NAV)
+   -------------------------------------------------------------------------- */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.975rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+/* Botão Primário - Login */
+nav a[href="/login"] {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+nav a[href="/login"]:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+nav a[href="/login"]:active {
+    transform: translateY(0);
+}
+
+/* Botão Secundário - Criar Conta */
+nav a[href="/register"] {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+}
+
+nav a[href="/register"]:hover {
+    background-color: var(--color-primary-light);
+    transform: translateY(-1px);
+}
+
+nav a[href="/register"]:active {
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   6. RODAPÉ (FOOTER)
+   -------------------------------------------------------------------------- */
+footer {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVIDADE
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    header {
+        padding: 1.25rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 2rem 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.35rem;
+    }
+}
