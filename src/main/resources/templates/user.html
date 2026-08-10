@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Usuário | AuthFlow</title>
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-container">
+            <h1>AuthFlow</h1>
+            <nav class="nav-main">
+                <a href="/" class="active">Início</a>
+                <a href="/profile">Perfil</a>
+                <a href="/logout" class="btn-logout">Sair</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- Mensagem de Boas-vindas -->
+        <section class="card welcome-card">
+            <h2>Bem-vindo, João! </h2>
+            <p>Você está autenticado no sistema.</p>
+        </section>
+
+        <div class="dashboard-grid">
+            <!-- Informações da Conta -->
+            <section class="card info-card">
+                <h3>Informações da Conta</h3>
+                
+                <div class="info-group">
+                    <p><strong>Nome:</strong> <span>João Silva</span></p>
+                    <p><strong>Email:</strong> <span>joao@email.com</span></p>
+                    <p><strong>Perfil:</strong> <span>Usuário</span></p>
+                    <p><strong>Status:</strong> <span class="badge badge-active">Ativo</span></p>
+                </div>
+            </section>
+
+
+            <section class="card actions-card">
+                <h3>Ações Rápidas</h3>
+
+                <ul class="actions-list">
+                    <li>
+                        <a href="/profile/edit" class="action-item">
+                            <span>Editar Perfil</span>
+                            <small>Atualize seus dados pessoais</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/password" class="action-item">
+                            <span>Alterar Senha</span>
+                            <small>Mantenha sua conta segura</small>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AuthFlow. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
