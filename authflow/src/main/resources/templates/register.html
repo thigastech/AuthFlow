@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta | AuthFlow</title>
+    <link rel="stylesheet" href="../css/register.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>AuthFlow</h1>
+        <h2>Sistema de Gerenciamento de Usuários</h2>
+    </header>
+
+    <main>
+        <section class="auth-card">
+            <h2>Criar nova conta</h2>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar_senha" placeholder="••••••••" required>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <span>Aceito os <a href="#" class="btn-link">termos de uso</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Criar Conta</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Já possui uma conta?</p>
+                <nav>
+                    <a href="/login" class="btn-secondary">Fazer Login</a>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AuthFlow. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
