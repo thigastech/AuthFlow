@@ -1,16 +1,7 @@
-# Maven
-target/
-
-# Java
-*.class
-
-# IDE
 .vscode/
+target/
+*.class
 .idea/
 *.iml
-
-# Environment
 .env
-
-# Logs
 *.log
